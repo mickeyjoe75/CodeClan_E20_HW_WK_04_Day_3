@@ -1,0 +1,16 @@
+<h2>Pizza Order Found</h2>
+
+<p>Name: <%= @order.pretty_name() %></p>
+<p>Quantity: <%= @order.quantity() %></p>
+<p>Topping: <%= @order.topping() %></p>
+
+<form action="/pizza_orders/<%= @order.id %>/delete" method="post">
+  <input type="submit" name="" value="Delete">
+</form>
+
+<form action="/pizza_orders/<%= @order.id %>/edit" method="get">
+  <input type="submit" name="" value="Edit">
+</form>
+
+<form action="/pizza_orders/<%= @order.id %>/edit" method="post">
+</form>
